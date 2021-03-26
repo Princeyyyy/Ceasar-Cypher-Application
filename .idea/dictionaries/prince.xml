@@ -1,8 +1,13 @@
 <component name="ProjectDictionaryState">
   <dictionary name="prince">
     <words>
+      <w>decryptionbutton</w>
       <w>decryptionintent</w>
+      <w>decryptiontext</w>
+      <w>encryptionbutton</w>
       <w>encryptionintent</w>
+      <w>encryptiontext</w>
+      <w>shiftkey</w>
     </words>
   </dictionary>
 </component>
