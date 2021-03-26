@@ -24,6 +24,7 @@
         android:gravity="center"/>
 
     <Button
+        android:id="@+id/encryption"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Encrypt Text"
@@ -41,6 +42,7 @@
         android:gravity="center"/>
 
     <Button
+        android:id="@+id/decryption"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Decrypt Text"
