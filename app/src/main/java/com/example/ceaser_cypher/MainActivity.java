@@ -43,13 +43,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Encrypt(View view) {
-        Intent intent = new Intent(this, EncryptionActivity.class);
+        Intent intent = new Intent(MainActivity.this, EncryptionActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_left, android.R.anim.slide_out_right);
     }
 
     public void Decrypt(View view) {
-        Intent intent = new Intent(this, DecryptionActivity.class);
+        Intent intent = new Intent(MainActivity.this, DecryptionActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_left, android.R.anim.slide_out_right);
     }

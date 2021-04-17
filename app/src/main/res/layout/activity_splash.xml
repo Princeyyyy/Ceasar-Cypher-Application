@@ -7,12 +7,14 @@
     tools:context=".SplashActivity">
 
     <ImageView
+        android:id="@+id/animImage"
         android:layout_width="match_parent"
         android:layout_height="400dp"
         android:src="@drawable/ceasar"
         android:layout_margin="50dp"/>
 
     <TextView
+        android:id="@+id/animText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="500dp"
