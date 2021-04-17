@@ -35,11 +35,17 @@ public class EncryptionActivity extends AppCompatActivity {
         encryptionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                EditText shiftKey = findViewById(R.id.shiftkey);
                 Editable x = encryptionText.getText();
                 String w = x.toString();
+                Editable a = shiftKey.getText();
+                String b = a.toString();
                 if (TextUtils.isEmpty(w)) {
-                    encryptionText.setError("Text is Required");
+                    encryptionText.setError("Text Required");
                     return;
+                }
+                if (TextUtils.isEmpty(b)) {
+                    shiftKey.setError("Shift Key Required");
                 } else {
                     encrypted.setText(EncrytionCc(x));
                 }
@@ -47,24 +53,21 @@ public class EncryptionActivity extends AppCompatActivity {
         });
     }
 
-//    EditText shiftKey = findViewById(R.id.shiftkey);
-//    String value = shiftKey.getText().toString();
-//    int finalValue = Integer.parseInt(value);
-
-    int key = 5;
-
     String EncrytionCc(Editable plain) {
+        EditText shiftKey = findViewById(R.id.shiftkey);
+        String value = shiftKey.getText().toString();
+        int finalValue = Integer.parseInt(value);
         String temp = "";
         for (int i = 0; i < plain.length(); i++) {
 
             if (plain.charAt(i) == ' ') {
                 temp += ' ';
-            } else if (plain.charAt(i) + key > 'z') {
-                temp += ((char) (plain.charAt(i) - (26 - key)));
+            } else if (plain.charAt(i) + finalValue > 'z') {
+                temp += ((char) (plain.charAt(i) - (26 - finalValue)));
             } else
-                temp += ((char) (plain.charAt(i) + key));
+                temp += ((char) (plain.charAt(i) + finalValue));
         }
         return temp;
-
     }
+
 }
