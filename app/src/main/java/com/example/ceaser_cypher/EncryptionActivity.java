@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -35,7 +36,13 @@ public class EncryptionActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Editable x = encryptionText.getText();
-                encrypted.setText(EncrytionCc(x));
+                String w = x.toString();
+                if (TextUtils.isEmpty(w)) {
+                    encryptionText.setError("Text is Required");
+                    return;
+                } else {
+                    encrypted.setText(EncrytionCc(x));
+                }
             }
         });
     }

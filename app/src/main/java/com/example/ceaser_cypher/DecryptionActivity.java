@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -32,7 +33,13 @@ public class DecryptionActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Editable y = decryptionText.getText();
-                decrypted.setText(DecrytionCc(y));
+                String z = y.toString();
+                if (TextUtils.isEmpty(z)) {
+                    decryptionText.setError("Text is Required");
+                    return;
+                } else {
+                    decrypted.setText(DecrytionCc(y));
+                }
             }
         });
     }
