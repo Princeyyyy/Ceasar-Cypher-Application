@@ -2,12 +2,14 @@ package com.example.ceaser_cypher;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import butterknife.BindView;
@@ -22,6 +24,8 @@ public class DecryptionActivity extends AppCompatActivity {
     Button decryptionbutton;
     @BindView(R.id.decrypted)
     TextView decrypted;
+    @BindView(R.id.image2)
+    ImageView image2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,14 +48,21 @@ public class DecryptionActivity extends AppCompatActivity {
                 if (TextUtils.isEmpty(e)) {
                     shiftKey2.setError("Shift Key Required");
                 } else {
-                    decrypted.setText(DecrytionCc(y));
+                    decrypted.setText(DecryptionCc(y));
                 }
+            }
+        });
+
+        image2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Menu2(v);
             }
         });
     }
 
 
-    String DecrytionCc(Editable cipher) {
+    String DecryptionCc(Editable cipher) {
         EditText shiftKey2 = findViewById(R.id.shiftkey2);
         String value2 = shiftKey2.getText().toString();
         int finalValue2 = Integer.parseInt(value2);
@@ -67,5 +78,11 @@ public class DecryptionActivity extends AppCompatActivity {
         }
         return temp;
 
+    }
+
+    public void Menu2(View view) {
+        Intent intent = new Intent(DecryptionActivity.this, MainActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_left, R.anim.stay);
     }
 }
