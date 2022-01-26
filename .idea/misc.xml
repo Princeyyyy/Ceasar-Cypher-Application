@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Prince/AndroidStudioProjects/Ceasar-Cypher-Application/app/src/main/res/layout/activity_decryption.xml" value="0.23641304347826086" />
+        <entry key="..\:/Users/Prince/AndroidStudioProjects/Ceasar-Cypher-Application/app/src/main/res/layout/activity_encryption.xml" value="0.25343999226562525" />
         <entry key="app/src/main/res/layout/activity_decryption.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_encryption.xml" value="0.27445652173913043" />
       </map>
