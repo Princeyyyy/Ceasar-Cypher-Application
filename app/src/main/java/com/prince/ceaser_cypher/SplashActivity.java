@@ -27,7 +27,7 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash);
         ButterKnife.bind(this);
 
@@ -44,6 +44,6 @@ public class SplashActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        },SPLASH);
+        }, SPLASH);
     }
 }

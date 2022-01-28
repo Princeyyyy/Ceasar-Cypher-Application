@@ -171,7 +171,6 @@
                     android:fontFamily="@font/autour_one"
                     android:text="Your Dencrypted text will appear here..."
                     android:textColor="@color/black"
-                    android:textIsSelectable="true"
                     android:textSize="11sp"
                     android:textStyle="bold" />
 

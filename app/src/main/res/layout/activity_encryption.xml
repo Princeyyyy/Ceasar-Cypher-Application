@@ -171,7 +171,6 @@
                     android:padding="6dp"
                     android:text="Your Encrypted text will appear here..."
                     android:textColor="@color/black"
-                    android:textIsSelectable="true"
                     android:textSize="11sp"
                     android:textStyle="bold" />
 

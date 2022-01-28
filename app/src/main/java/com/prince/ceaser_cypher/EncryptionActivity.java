@@ -2,6 +2,8 @@ package com.prince.ceaser_cypher;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.text.ClipboardManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -11,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -56,6 +59,15 @@ public class EncryptionActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Menu(v);
+            }
+        });
+
+        encrypted.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ClipboardManager cm = (ClipboardManager) getApplicationContext().getSystemService(Context.CLIPBOARD_SERVICE);
+                cm.setText(encrypted.getText());
+                Toast.makeText(EncryptionActivity.this, "Copied to clipboard", Toast.LENGTH_SHORT).show();
             }
         });
     }
