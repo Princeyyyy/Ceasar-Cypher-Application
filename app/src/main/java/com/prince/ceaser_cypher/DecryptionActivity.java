@@ -36,40 +36,29 @@ public class DecryptionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_decryption);
         ButterKnife.bind(this);
 
-        decryptionbutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                EditText shiftKey2 = findViewById(R.id.shiftkey2);
-                Editable y = decryptionText.getText();
-                String z = y.toString();
-                Editable d = shiftKey2.getText();
-                String e = d.toString();
-                if (TextUtils.isEmpty(z)) {
-                    decryptionText.setError("Text Required");
-                    return;
-                }
-                if (TextUtils.isEmpty(e)) {
-                    shiftKey2.setError("Shift Key Required");
-                } else {
-                    decrypted.setText(DecryptionCc(y));
-                }
+        decryptionbutton.setOnClickListener(v -> {
+            EditText shiftKey2 = findViewById(R.id.shiftkey2);
+            Editable y = decryptionText.getText();
+            String z = y.toString();
+            Editable d = shiftKey2.getText();
+            String e = d.toString();
+            if (TextUtils.isEmpty(z)) {
+                decryptionText.setError("Text Required");
+                return;
+            }
+            if (TextUtils.isEmpty(e)) {
+                shiftKey2.setError("Shift Key Required");
+            } else {
+                decrypted.setText(DecryptionCc(y));
             }
         });
 
-        image2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Menu2(v);
-            }
-        });
+        image2.setOnClickListener(this::Menu2);
 
-        decrypted.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ClipboardManager cm = (ClipboardManager) getApplicationContext().getSystemService(Context.CLIPBOARD_SERVICE);
-                cm.setText(decrypted.getText());
-                Toast.makeText(DecryptionActivity.this, "Copied to clipboard", Toast.LENGTH_SHORT).show();
-            }
+        decrypted.setOnClickListener(view -> {
+            ClipboardManager cm = (ClipboardManager) getApplicationContext().getSystemService(Context.CLIPBOARD_SERVICE);
+            cm.setText(decrypted.getText());
+            Toast.makeText(DecryptionActivity.this, "Copied to clipboard", Toast.LENGTH_SHORT).show();
         });
     }
 

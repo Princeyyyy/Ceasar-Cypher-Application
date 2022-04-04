@@ -10,15 +10,15 @@
         android:id="@+id/image2"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="30dp"
-        android:src="@drawable/back"
-        android:onClick="Menu2"/>
+        android:onClick="Menu2"
+        android:src="@drawable/back" />
 
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginLeft="140dp"
+        android:layout_marginStart="140dp"
         android:layout_marginTop="50dp"
         android:src="@drawable/unlock2" />
 
@@ -26,12 +26,12 @@
         android:id="@+id/encrypt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="150dp"
         android:layout_marginBottom="20dp"
-        android:gravity="center"
         android:fontFamily="@font/autour_one"
-        android:text="Welcome To The Decryption Screen:"
+        android:gravity="center"
+        android:text="@string/welcome_decrypt"
         android:textColor="@color/black"
         android:textSize="13sp"
         android:textStyle="bold" />
@@ -43,9 +43,9 @@
         android:layout_marginLeft="50dp"
         android:layout_marginTop="180dp"
         android:layout_marginBottom="10dp"
-        android:textAlignment="center"
         android:fontFamily="@font/autour_one"
-        android:text="Ensure both Text and Shift Key are entered!"
+        android:text="@string/warning"
+        android:textAlignment="center"
         android:textColor="@color/red"
         android:textSize="11sp"
         android:textStyle="bold" />
@@ -77,10 +77,10 @@
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:fontFamily="@font/autour_one"
                     android:maxLines="1"
                     android:padding="5dp"
-                    android:text="Enter Text To Decrypt Below:"
-                    android:fontFamily="@font/autour_one"
+                    android:text="@string/enter_text_to_decrypt_below"
                     android:textColor="@color/black"
                     android:textSize="13sp"
                     android:textStyle="bold" />
@@ -101,10 +101,10 @@
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:fontFamily="@font/autour_one"
                     android:maxLines="1"
                     android:padding="5dp"
-                    android:text="Enter Shift Key:"
-                    android:fontFamily="@font/autour_one"
+                    android:text="@string/shift"
                     android:textColor="@color/black"
                     android:textSize="13sp"
                     android:textStyle="bold" />
@@ -136,7 +136,7 @@
         android:layout_marginRight="80dp"
         android:background="@drawable/inputs"
         android:fontFamily="@font/autour_one"
-        android:text="Decrypt Text" />
+        android:text="@string/decrypt_text" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -166,10 +166,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="11dp"
+                    android:fontFamily="@font/autour_one"
                     android:maxLines="1"
                     android:padding="6dp"
-                    android:fontFamily="@font/autour_one"
-                    android:text="Your Dencrypted text will appear here..."
+                    android:text="@string/text"
                     android:textColor="@color/black"
                     android:textSize="11sp"
                     android:textStyle="bold" />

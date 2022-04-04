@@ -8,52 +8,52 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        android:src="@drawable/ceasar"
-        android:layout_margin="50dp"/>
+        android:layout_margin="50dp"
+        android:src="@drawable/ceasar" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="430dp"
         android:fontFamily="@font/autour_one"
         android:gravity="center"
-        android:text="Welcome to Caesar-Cypher Encryption and \nDecryption"
+        android:text="@string/welcome_main"
         android:textColor="@color/black"
         android:textSize="14sp"
         android:textStyle="bold" />
 
     <Button
-        android:background="@drawable/inputs"
         android:id="@+id/encryption"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Encrypt Text"
-        android:fontFamily="@font/autour_one"
+        android:layout_marginLeft="80dp"
         android:layout_marginTop="500dp"
         android:layout_marginRight="80dp"
-        android:layout_marginLeft="80dp"
-        android:onClick="Encrypt"/>
+        android:background="@drawable/inputs"
+        android:fontFamily="@font/autour_one"
+        android:onClick="Encrypt"
+        android:text="@string/encrypt_btn_text" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Or"
-        android:textColor="@color/black"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="570dp"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:text="@string/or"
+        android:textColor="@color/black" />
 
     <Button
-        android:background="@drawable/inputs"
         android:id="@+id/decryption"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Decrypt Text"
-        android:fontFamily="@font/autour_one"
+        android:layout_marginLeft="80dp"
         android:layout_marginTop="600dp"
         android:layout_marginRight="80dp"
-        android:layout_marginLeft="80dp"
-        android:onClick="Decrypt"/>
+        android:background="@drawable/inputs"
+        android:fontFamily="@font/autour_one"
+        android:onClick="Decrypt"
+        android:text="@string/decrypt_btn_text" />
 
 </RelativeLayout>

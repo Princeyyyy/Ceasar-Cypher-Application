@@ -20,7 +20,7 @@
         android:layout_marginTop="500dp"
         android:fontFamily="@font/aclonica"
         android:gravity="center"
-        android:text="Caesar-Cypher\n Encryption\n and \nDecryption"
+        android:text="@string/splash_title"
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold" />
