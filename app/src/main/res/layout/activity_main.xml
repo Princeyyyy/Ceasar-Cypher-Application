@@ -38,10 +38,12 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="570dp"
         android:gravity="center"
+        android:fontFamily="@font/autour_one"
         android:text="@string/or"
+        android:textStyle="bold"
         android:textColor="@color/black" />
 
     <Button
@@ -55,5 +57,17 @@
         android:fontFamily="@font/autour_one"
         android:onClick="Decrypt"
         android:text="@string/decrypt_btn_text" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:fontFamily="@font/autour_one"
+        android:text="@string/version"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
 
 </RelativeLayout>

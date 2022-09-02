@@ -5,14 +5,15 @@
     <string name="enter_text_to_decrypt_below">Enter Text To Decrypt Below:</string>
     <string name="shift">Enter Shift Key:</string>
     <string name="decrypt_text">Decrypt Text</string>
-    <string name="text">Your Decrypted text will appear here...</string>
+    <string name="text">Your Decrypted text will appear here…</string>
     <string name="welcome_encrypt">Welcome To The Encryption Screen:</string>
     <string name="enter_text_to_encrypt_below">Enter Text To Encrypt Below:</string>
     <string name="encrypt_text">Encrypt Text</string>
-    <string name="your_encrypted_text_will_appear_here">Your Encrypted text will appear here...</string>
+    <string name="your_encrypted_text_will_appear_here">Your Encrypted text will appear here…</string>
     <string name="splash_title">Caesar-Cypher\n Encryption\n and \nDecryption</string>
     <string name="welcome_main">Welcome to Caesar-Cypher Encryption and \nDecryption</string>
     <string name="encrypt_btn_text">Encrypt Text</string>
     <string name="or">Or</string>
     <string name="decrypt_btn_text">Decrypt Text</string>
+    <string name="version">Version 1.0.2</string>
 </resources>
